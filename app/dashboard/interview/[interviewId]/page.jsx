@@ -28,11 +28,11 @@ function Interview({ params }) {
     setInterviewData(result[0]);
   };
   return (
-    <div className="my-10 ">
+    <div className="my-10">
       <h2 className="font-bold text-2xl">Let's Get Started</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-        <div className="flex flex-col my-5 gap-5 ">
-          <div className="flex flex-col p-5 rounded-lg border gap-5">
+        <div className="flex flex-col my-5 gap-5">
+          <div className="flex flex-col p-5 rounded-lg border border-[#E8E2D7] bg-[#FFFDF7]/70 backdrop-blur-sm gap-5">
             <h2 className="text-lg">
               <strong>Job Role/Job Position:</strong>
               {interviewData?.jobPosition}{" "}
@@ -46,7 +46,7 @@ function Interview({ params }) {
               {interviewData?.jobExperience}{" "}
             </h2>
           </div>
-          <div className="p-5 border rounded-lg border-yellow-300 bg-yellow-100">
+          <div className="p-5 border rounded-lg border-yellow-300 bg-yellow-100/50 backdrop-blur-sm">
             <h2 className="flex gap-2 items-center text-yellow-500">
               {" "}
               <Lightbulb />
@@ -57,7 +57,7 @@ function Interview({ params }) {
             </h2>
           </div>
         </div>
-        <div>
+        <div className="bg-[#FFFDF7]/70 backdrop-blur-sm p-5 rounded-lg border border-[#E8E2D7]">
           {webCamEnabled ? (
             <Webcam
               onUserMedia={() => setWebCamEnabled(true)}

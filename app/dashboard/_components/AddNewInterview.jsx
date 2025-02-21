@@ -85,15 +85,15 @@ function AddNewInterview() {
   return (
     <div>
       <div
-        className="p-10 border rounded-lg bg-secondary
+        className="p-10 border rounded-lg bg-[#FFFAF0]/70 backdrop-blur-sm
         hover:scale-105 hover:shadow-md cursor-pointer
-         transition-all border-dashed"
+        transition-all border-dashed border-[#E6D5C1]"
         onClick={() => setOpenDailog(true)}
       >
-        <h2 className="text-lg text-center">+ Add New</h2>
+        <h2 className="text-lg text-center text-[#6B4423]">+ Add New</h2>
       </div>
       <Dialog open={openDailog} onOpenChange={setOpenDailog}>
-        <DialogContent className="max-w-2xl">
+        <DialogContent className="bg-[#FFFAF0] border-[#E6D5C1] max-w-2xl">
           <DialogHeader>
             <DialogTitle className="text-2xl">
               Tell us more about your job interviewing
