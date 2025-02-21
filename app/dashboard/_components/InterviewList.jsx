@@ -35,15 +35,23 @@ function InterviewList() {
     }
   };
 
+  const handleDelete = (mockId) => {
+    setInterviewList((prev) =>
+      prev.filter((interview) => interview.mockId !== mockId)
+    );
+  };
+
   if (loading) {
     return (
       <div>
-        <h2 className="font-medium text-xl">Previous Mock Interviews</h2>
+        <h2 className="font-bold text-xl text-[#3C2915]">
+          Previous Mock Interviews
+        </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 my-3">
           {[1, 2, 3, 4].map((item, index) => (
             <div
               key={index}
-              className="h-[100px] w-full bg-gray-200 animate-pulse rounded-lg"
+              className="h-[100px] w-full bg-[#FFFAF0]/50 animate-pulse rounded-lg"
             ></div>
           ))}
         </div>
@@ -54,19 +62,21 @@ function InterviewList() {
   if (!loading && interviewList.length === 0) {
     return (
       <div className="text-center py-10">
-        <h2 className="font-medium text-xl mb-6">Previous Mock Interviews</h2>
-        <div className="max-w-md mx-auto p-6 border rounded-lg bg-gray-50">
-          <PlusCircle className="w-12 h-12 text-gray-400 mx-auto mb-4" />
-          <h3 className="text-lg font-medium text-gray-900 mb-2">
+        <h2 className="font-bold text-xl text-[#3C2915] mb-6">
+          Previous Mock Interviews
+        </h2>
+        <div className="max-w-md mx-auto p-6 border rounded-lg bg-[#FFFAF0]/70 backdrop-blur-sm border-[#E6D5C1]">
+          <PlusCircle className="w-12 h-12 text-[#6B4423] mx-auto mb-4" />
+          <h3 className="text-lg font-medium text-[#3C2915] mb-2">
             No Previous Interviews
           </h3>
-          <p className="text-gray-500 mb-4">
+          <p className="text-[#6B4423] mb-4">
             You haven't created any mock interviews yet. Create your first
             interview to get started!
           </p>
           <Link
             href="/dashboard"
-            className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-primary hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary"
+            className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-[#FFFAF0] bg-[#8B9D77] hover:bg-[#8B9D77]/90"
           >
             Create New Interview
           </Link>
@@ -77,10 +87,16 @@ function InterviewList() {
 
   return (
     <div>
-      <h2 className="font-medium text-xl">Previous Mock Interviews</h2>
+      <h2 className="font-bold text-xl text-[#3C2915]">
+        Previous Mock Interviews
+      </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 my-3">
-        {interviewList.map((interview, index) => (
-          <InterviewItemCard interview={interview} key={interview.id} />
+        {interviewList.map((interview) => (
+          <InterviewItemCard
+            interview={interview}
+            key={interview.id}
+            onDelete={handleDelete}
+          />
         ))}
       </div>
     </div>

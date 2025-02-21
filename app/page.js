@@ -96,8 +96,8 @@ export default function Home() {
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           <Link href="/">
             <div className="flex items-center gap-2">
-              <Sparkles className="h-8 w-8 text-primary" />
-              <h2 className="text-2xl font-bold text-primary">
+              <Sparkles className="h-6 w-6 text-[#6B4423]" />
+              <h2 className="text-2xl font-bold text-[#3C2915]">
                 Interview-Buddy
               </h2>
             </div>
