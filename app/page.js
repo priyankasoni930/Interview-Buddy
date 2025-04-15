@@ -144,21 +144,21 @@ export default function Home() {
         </div>
 
         {/* Stats Section */}
-        <section className="py-12 bg-[#FFFAF0]/70 backdrop-blur-sm rounded-2xl shadow-sm mb-20 border border-[#E6D5C1]">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-6xl mx-auto px-4">
-            {stats.map((stat, index) => (
-              <div key={index} className="text-center">
-                <div className="flex justify-center mb-4">
-                  <div className="text-[#6B4423]">{stat.icon}</div>
-                </div>
-                <div className="text-3xl font-bold text-[#3C2915] mb-2">
-                  {stat.value}
-                </div>
-                <div className="text-sm text-[#6B4423]">{stat.label}</div>
-              </div>
-            ))}
-          </div>
-        </section>
+        // <section className="py-12 bg-[#FFFAF0]/70 backdrop-blur-sm rounded-2xl shadow-sm mb-20 border border-[#E6D5C1]">
+        //   <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-6xl mx-auto px-4">
+        //     {stats.map((stat, index) => (
+        //       <div key={index} className="text-center">
+        //         <div className="flex justify-center mb-4">
+        //           <div className="text-[#6B4423]">{stat.icon}</div>
+        //         </div>
+        //         <div className="text-3xl font-bold text-[#3C2915] mb-2">
+        //           {stat.value}
+        //         </div>
+        //         <div className="text-sm text-[#6B4423]">{stat.label}</div>
+        //       </div>
+        //     ))}
+        //   </div>
+        // </section>
 
         {/* Features Section with enhanced styling */}
         <section className="py-16">
