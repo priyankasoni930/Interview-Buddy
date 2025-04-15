@@ -69,19 +69,9 @@ export default function Home() {
 
   const stats = [
     {
-      icon: <Users className="w-8 h-8 text-primary" />,
-      value: "10,000+",
-      label: "Active Users",
-    },
-    {
       icon: <Star className="w-8 h-8 text-primary" />,
-      value: "4.9/5",
+      value: "4/5",
       label: "User Rating",
-    },
-    {
-      icon: <Trophy className="w-8 h-8 text-primary" />,
-      value: "85%",
-      label: "Success Rate",
     },
     {
       icon: <Clock className="w-8 h-8 text-primary" />,
