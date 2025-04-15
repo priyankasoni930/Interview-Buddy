@@ -119,7 +119,7 @@ export default function Home() {
             </p>
             <div className="flex gap-4">
               <Link href="/dashboard">
-                <Button className="gap-2">
+                <Button className="gap-2 bg-[#A98B73] ">
                   Get Started <ArrowRight className="w-4 h-4" />
                 </Button>
               </Link>
@@ -143,7 +143,7 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Stats Section */}
+        {/* Stats Section
         // <section className="py-12 bg-[#FFFAF0]/70 backdrop-blur-sm rounded-2xl shadow-sm mb-20 border border-[#E6D5C1]">
         //   <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-6xl mx-auto px-4">
         //     {stats.map((stat, index) => (
@@ -158,7 +158,7 @@ export default function Home() {
         //       </div>
         //     ))}
         //   </div>
-        // </section>
+        // </section> */}
 
         {/* Features Section with enhanced styling */}
         <section className="py-16">
@@ -291,7 +291,7 @@ export default function Home() {
         <div className="grid md:grid-cols-4 gap-8 mb-8">
           <div>
             <div className="flex items-center gap-2 mb-4">
-              <Sparkles className="h-6 w-6 text-primary" />
+              <Sparkles className="h-6 w-6 text-[#A98B73] " />
               <h3 className="font-bold text-lg">Interview-Buddy</h3>
             </div>
             <p className="text-gray-600">
@@ -360,7 +360,7 @@ export default function Home() {
           </div>
         </div>
         <div className="border-t pt-8 text-center text-gray-600">
-          © 2024 Interview-Buddy. All rights reserved.
+          © 2025 Interview-Buddy. All rights reserved.
         </div>
       </footer>
     </div>
